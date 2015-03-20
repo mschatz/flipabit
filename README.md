@@ -20,3 +20,19 @@ Confirming the presense of a mutation
 ---
 > 0002360 0000 4800 c085 0875 10bf 6007 c900 e0ff
 ```
+
+
+# Try all possible flips
+
+```
+$ ./try_all_flips.sh  >& try.log
+
+## Wait a while, and then hit control-c otherwise will be hung forever
+
+$ grep -c PASS try.log
+848
+$ grep -c FAIL try.log
+459
+Created infinite loop on byte 1307
+```
+
