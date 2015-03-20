@@ -5,7 +5,7 @@ int main(int argc, char ** argv)
 {
   if (argc != 4)
   {
-    fprintf(stderr, "editbinary file newfile pos\n");
+    fprintf(stderr, "flipabit file newfile pos\n");
     return 1;
   }
 
@@ -28,12 +28,8 @@ int main(int argc, char ** argv)
   int totalbytes = 0;
   int bitsflipped = 0;
 
-  double errorrate = 0.0001;
-
   while ((bytes = fread(buffer, 1, 1, in)) != 0)
   {
-    // float r = ((float)rand()) / RAND_MAX;
-    // if (r < errorrate)
     if (totalbytes == editpos)
     {
       fprintf(stderr, "-- flipping a bit in byte %d\n", totalbytes);
