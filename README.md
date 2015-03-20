@@ -2,8 +2,9 @@
 Thought experiment of what happens when a binary program is randomly edited
 
 
-## Example run:
+# Example run:
 
+```
 $ ./random_mutate.sh
 Running original program
 Hello, World!
@@ -18,3 +19,4 @@ Confirming the presense of a mutation
 < 0002360 0000 4800 c085 0874 10bf 6007 c900 e0ff
 ---
 > 0002360 0000 4800 c085 0875 10bf 6007 c900 e0ff
+```
